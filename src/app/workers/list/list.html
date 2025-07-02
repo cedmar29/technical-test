@@ -1,0 +1,9 @@
+<h1>Liste des intérimaires</h1>
+@for (worker of workers.value(); track worker.id) {
+  <div>
+    <div>
+      <a [routerLink]="[worker.id]">{{ worker.firstName }} {{ worker.lastName }}</a>
+    </div>
+    <div>{{ worker.job }}</div>
+  </div>
+}
