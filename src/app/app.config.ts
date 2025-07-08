@@ -1,6 +1,8 @@
+import { registerLocaleData } from '@angular/common';
 import { provideHttpClient } from '@angular/common/http';
+import localeFr from '@angular/common/locales/fr';
 import {
-  ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection,
+  ApplicationConfig, LOCALE_ID, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
@@ -12,5 +14,8 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideHttpClient(),
     provideRouter(routes),
+    { provide: LOCALE_ID, useValue: 'fr' }
   ]
 };
+
+registerLocaleData(localeFr);

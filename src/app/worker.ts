@@ -1,3 +1,5 @@
+import { Mission } from './mission';
+
 export interface Worker {
   id: string;
   createdAt: string;
@@ -6,4 +8,6 @@ export interface Worker {
   birthDate: string;
   job: string;
   experience: number;
+  picture: string;
+  missions?: Mission[];
 }
