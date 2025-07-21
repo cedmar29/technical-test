@@ -1,0 +1,39 @@
+@if (worker.value(); as worker) {
+  <h2>{{ worker.firstName }} {{ worker.lastName }}</h2>
+  <div>
+    <div>{{ worker.birthDate | date }}</div>
+    <div>{{ worker.job }}</div>
+    <div>{{ worker.experience }} mois d'expérience</div>
+  </div>
+
+  <h3>Liste des missions</h3>
+  <table mat-table [dataSource]="worker.missions ?? []">
+    <ng-container matColumnDef="job">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Poste </th>
+      <td mat-cell *matCellDef="let mission"> {{ mission.job}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+      <td mat-cell *matCellDef="let mission"> Du {{ mission.dateStart | date:'shortDate' }} au {{ mission.dateEnd | date:'shortDate' }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="company">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Entreprise </th>
+      <td mat-cell *matCellDef="let mission"> {{ mission.company }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="location">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Localisation </th>
+      <td mat-cell *matCellDef="let mission"> {{ mission.location }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+      <td mat-cell *matCellDef="let mission"></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+  </table>
+}

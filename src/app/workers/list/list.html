@@ -1,0 +1,37 @@
+<h1>Liste des intérimaires</h1>
+@if (workers.value(); as workers) {
+  <table mat-table [dataSource]="workers">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
+      <td mat-cell *matCellDef="let element"> {{ element.firstName }} {{ element.lastName }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="birthDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Date de naissance </th>
+      <td mat-cell *matCellDef="let element"> {{ element.birthDate | date }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="job">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Poste </th>
+      <td mat-cell *matCellDef="let element"> {{ element.job }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="experience">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Expérience </th>
+      <td mat-cell *matCellDef="let element"> {{ element.experience }} mois </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+      <td mat-cell *matCellDef="let element">
+        <a mat-icon-button [routerLink]="element.id">
+          <mat-icon>chevron_right</mat-icon>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+  </table>
+  <mat-paginator [pageIndex]="page() - 1" [pageSize]="limit()" [length]="38" (page)="changePage($event)"></mat-paginator>
+}

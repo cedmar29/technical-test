@@ -1,6 +1,34 @@
-# TechnicalTest
+# Entretien technique Peopulse
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+Cette application inspirée du logiciel Peopulse permet d'afficher une liste d'intérimaires et les missions pour lesquelles ils ont été embauchés. Elle est composée d'une API (générée via mockapi.io) et de ce projet Angular.
+
+Les deux routes API sont :
+- https://6863e77388359a373e96ce2c.mockapi.io/api/workers
+- https://6863e77388359a373e96ce2c.mockapi.io/api/missions
+
+Voici la documentation de mockapi : https://github.com/mockapi-io/docs/wiki
+
+## Exercice n°1
+
+Implémenter la charte graphique de Peopulse
+
+<img width="790" height="831" alt="image" src="https://github.com/user-attachments/assets/3e86e44b-990c-483d-86f0-f7818a344c68" />
+
+#2F2347
+#6C6380
+#ADB3C5
+#b73b68
+#4786FF
+#29A059
+#E59B34
+#C43C39
+
+## Exercice n°2
+
+Développer les fonctionnalités suivantes :
+- créer un nouvel intérimaire
+- modifier un intérimaire existant
+- supprimer un intérimaire
 
 ## Development server
 
@@ -57,3 +85,4 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
