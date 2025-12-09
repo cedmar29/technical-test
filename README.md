@@ -8,20 +8,45 @@ Les deux routes API sont :
 
 Voici la documentation de mockapi : https://github.com/mockapi-io/docs/wiki
 
+Lien vers le repo Github : https://github.com/cedmar29/technical-test
+
 ## Exercice n°1
 
-Implémenter la charte graphique de Peopulse
+Voici la charte graphique de Peopulse :
 
 <img width="790" height="831" alt="image" src="https://github.com/user-attachments/assets/3e86e44b-990c-483d-86f0-f7818a344c68" />
 
+### Gris :
+
 #2F2347
+
 #6C6380
+
 #ADB3C5
+
+#DEE2ED
+
+#EFF0F5
+
+#FAFAFA
+
+#ffffff
+
+### Couleurs :
+
 #b73b68
+
 #4786FF
+
 #29A059
+
 #E59B34
+
 #C43C39
+
+### Objectifs :
+- créer un thème avec ces couleurs, proposer des moyens de créer d'autres thèmes (dark mode par exemple)
+- rendre le tableau plus lisible (lignes alternées, hover...)
 
 ## Exercice n°2
 
